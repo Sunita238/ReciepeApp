@@ -1,7 +1,10 @@
 package com.example.recipe.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
+@Data
 @Entity
 public class Ingredient {
     @Id
@@ -17,35 +20,4 @@ public class Ingredient {
     @JoinColumn(name = "receipe_id")
     private Reciepe reciepe;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getIngredient() {
-        return ingredient;
-    }
-
-    public void setIngredient(String ingredient) {
-        this.ingredient = ingredient;
-    }
-
-    public UnitOfMeasure getUnitOfMeasure() {
-        return unitOfMeasure;
-    }
-
-    public void setUnitOfMeasure(UnitOfMeasure unitOfMeasure) {
-        this.unitOfMeasure = unitOfMeasure;
-    }
-
-    public Reciepe getReciepe() {
-        return reciepe;
-    }
-
-    public void setReciepe(Reciepe reciepe) {
-        this.reciepe = reciepe;
-    }
 }

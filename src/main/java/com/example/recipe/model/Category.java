@@ -1,8 +1,11 @@
 package com.example.recipe.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.Set;
 
+@Data
 @Entity
 public class Category {
     @Id

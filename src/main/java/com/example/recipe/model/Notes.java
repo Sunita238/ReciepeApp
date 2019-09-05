@@ -1,7 +1,10 @@
 package com.example.recipe.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
+@Data
 @Entity
 public class Notes {
     @Id
@@ -10,4 +13,5 @@ public class Notes {
     private String notes;
     @OneToOne(mappedBy = "notes")
     private Reciepe reciepe;
+
 }
