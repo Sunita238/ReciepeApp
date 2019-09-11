@@ -4,7 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 
-@Data
+//@Data
 @Entity
 public class UnitOfMeasure {
     @Id
@@ -12,7 +12,19 @@ public class UnitOfMeasure {
     private Long id;
     private String measure;
 
-    @OneToOne(mappedBy = "unitOfMeasure")
-    private Ingredient ingredient;
+    public Long getId() {
+        return id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getMeasure() {
+        return measure;
+    }
+
+    public void setMeasure(String measure) {
+        this.measure = measure;
+    }
 }
